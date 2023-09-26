@@ -6,7 +6,7 @@ const scoreDisplay = document.querySelector('.score')
 //global variables 
 let score = 0;
 let timer;
-let gamePace = 1000; //you can change it, the lower the faster
+let gamePace = 100; //you can change it, the lower the faster
 let active = 0;
 let rounds = 0;
 

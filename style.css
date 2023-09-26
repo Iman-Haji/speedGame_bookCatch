@@ -13,6 +13,13 @@ body {
 h1 {
   font-family: 'Rajdhani', sans-serif;
   font-size: 3rem;
+  color: rgba(5, 8, 46, 0.734);
+}
+
+p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2rem;
+  color: rgba(5, 8, 46, 0.734);
 }
 
 /*inline box/display flex*/
@@ -20,13 +27,14 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 90px;
 }
 
 /*don't use clickbacks*/
 .circle {
   width: 100px;
   height: 100px;
-  background-color: rgb(104, 85, 48);
+  background-color: rgb(106, 93, 136);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -37,6 +45,16 @@ h1 {
 }
 
 .circle.active {
-  background-color: rgba(93, 95, 113, 0.734);
+  background-color: rgba(5, 8, 46, 0.734);
   /*background-image: url(https://i.pinimg.com/564x/28/a5/38/28a53818427467bceef016911ed494b4.jpg);*/
+}
+
+#startButton,
+#endButton {
+  background-color: rgb(106, 93, 136);
+  padding: 10px 20px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
