@@ -2,14 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(189, 158, 128);
-
 }
 
 body {
-  background-image: linear-gradient(to left top, #4375, #8397);
+  background-image: linear-gradient(to right top, rgb(132, 108, 204), rgb(207, 179, 154));
   background-attachment: fixed;
-  color: rgb(123, 89, 89);
   text-align: center;
 }
 
@@ -25,8 +22,7 @@ h1 {
   justify-content: center;
 }
 
-/*clickback dont use it
-border radius means youre gonna make it as rounded as possible*/
+/*don't use clickbacks*/
 .circle {
   width: 100px;
   height: 100px;
