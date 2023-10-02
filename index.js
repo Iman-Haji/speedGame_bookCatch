@@ -6,11 +6,16 @@ const scoreDisplay = document.querySelector('.score')
 //global variables 
 let score = 0;
 let timer;
-let gamePace = 100; //you can change it, the lower the faster
+let gamePace = 1000; //you can change it, the lower the faster
 let active = 0;
 let rounds = 0;
 
-const getRndInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+//const getRndInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 
 //console.log(getRndInteger(0, 3));
 
@@ -18,9 +23,9 @@ const clickCircle = (i) => {
   if (i !== active) {
     return endGame()
   }
-  rounds--
-  score += 10
-  scoreDisplay.textContent = score
+  rounds--;
+  score += 10;
+  scoreDisplay.textContent = score;
 }
 
 //variable name we created is circle. 
@@ -32,13 +37,16 @@ circles.forEach((circle, i) => {
 const enableEvents = () => {
   circles.forEach(circle => {
     circle.style.pointerEvents = "auto";
-  })
+  });
 }
 
 const startGame = () => {
   if (rounds >= 3) {
-    return endGame()
+    return endGame();
   }
+  //added
+  let startGameSound = new Audio('');
+  myAudio.play();
 
   enableEvents();
   const newActive = pickNew(active);
@@ -50,12 +58,13 @@ const startGame = () => {
 
   timer = setTimeout(startGame, 1000, gamePace)
 
-  gamePace -= 10
-  rounds++
+  gamePace -= 10;
+  rounds++;
+
   function pickNew(active) {
     const newActive = getRndInteger(0, 3);
     if (newActive !== active) {
-      return newActive
+      return newActive;
     }
     return pickNew(active);
   }

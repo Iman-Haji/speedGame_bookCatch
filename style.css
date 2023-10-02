@@ -4,22 +4,36 @@
   box-sizing: border-box;
 }
 
+/*background-image: linear-gradient(to right top, rgb(132, 108, 204), rgb(207, 179, 154));*/
 body {
-  background-image: linear-gradient(to right top, rgb(132, 108, 204), rgb(207, 179, 154));
+
+  /*background-image: url('https://i.pinimg.com/564x/93/8c/ef/938cef058895474f8dc20d50d36d27d6.jpg');*/
+  /*background-image: linear-gradient(to right top, rgb(132, 108, 204), rgb(207, 179, 154));*/
+  background-image: linear-gradient(to right top, rgb(57, 37, 86), rgb(246, 181, 242));
+  background-color: black;
   background-attachment: fixed;
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  /*color: lightslategray;*/
+  color: rgb(40, 40, 91);
 }
 
 h1 {
   font-family: 'Rajdhani', sans-serif;
   font-size: 3rem;
-  color: rgba(5, 8, 46, 0.734);
+
+  /*color: rgba(5, 8, 46, 0.734);*/
 }
 
-p {
+#introductionP {
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+#scoreP {
   font-family: 'Rajdhani', sans-serif;
   font-size: 2rem;
-  color: rgba(5, 8, 46, 0.734);
+  padding-top: 70px;
 }
 
 /*inline box/display flex*/
@@ -27,15 +41,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 90px;
+  padding: 50px;
 }
 
+/*  overflow: hidden; */
 /*don't use clickbacks*/
 .circle {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(106, 93, 136);
-  border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,16 +57,31 @@ p {
 }
 
 .circle.active {
-  background-color: rgba(5, 8, 46, 0.734);
+  background-color: rgba(223, 212, 144, 0.734);
   /*background-image: url(https://i.pinimg.com/564x/28/a5/38/28a53818427467bceef016911ed494b4.jpg);*/
+  /*background-size: cover;*/
 }
 
-#startButton,
-#endButton {
-  background-color: rgb(106, 93, 136);
+#startButton {
+  background-color: rgb(196, 182, 230);
   padding: 10px 20px;
-  border-radius: 10%;
-  display: flex;
+  border-radius: 9%;
   align-items: center;
   justify-content: center;
+  font-size: x-large;
+  font-weight: 700;
+
 }
+
+#endButton {
+  background-color: rgb(158, 137, 206);
+  padding: 10px 20px;
+  border-radius: 9%;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 700;
+
+}
+
+/*#startButton:hover {}*/
