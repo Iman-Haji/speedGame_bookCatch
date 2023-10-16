@@ -29,20 +29,33 @@ h1 {
   width: 800px;
   height: 300px;
   box-shadow: 0px 2px 16px #d9aeae;
-  background-color: rgb(174, 159, 139);
+  background-color: rgb(57, 37, 86);
   display: none;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   border: 3px solid rgb(169, 122, 193);
   border-radius: 18px;
   padding: 0;
-  top: 50%;
-  left: 50%;
+  /*top: 50%;
+  left: 50%;*/
+  left: 30%;
+  top: 30%;
 }
 
 .modal.visible {
   display: flex;
+}
+
+
+h3,
+#modalP {
+  color: rgb(169, 122, 193);
+  font-size: 30px;
+}
+
+#modalP {
+  padding-bottom: 70px;
 }
 
 #introductionP {
@@ -56,11 +69,17 @@ h1 {
   padding-top: 70px;
 }
 
-#score {
-  font-size: 3rem;
-  color: rgb(200, 200, 117);
+.scoreP,
+.score {
+  font-size: 2.2rem;
+  padding-top: 80px;
 }
 
+/*
+.score {
+  font-size: 3rem;
+}
+*/
 .closeButton {
   position: absolute;
   display: flex;
