@@ -24,14 +24,20 @@
     <h1>˗ˏˋ BOOK-CATCH ´ˎ˗</h1>
     <p id="introductionP">Your aim is to catch as many books as possible. The more you catch, the bigger the sale you'll earn! 
     </p>
-    <p>For each book you earn, you get a 0.5% discount. We wish you good luck!</p>
+    <p id="introductionP">For each book you earn, you get a 0.5% discount. We wish you good luck!</p>
+
+
+    <p>SCORE <span class="score">0</span></p>
+
+
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <h3>Game's Over!</h3>
-        <p>SCORE: <span id="scoreForModal"></span>0</p>
+        <h3>Game Over...</h3>
+        <p>YOUR BEST SCORE SO FAR:
+          <span id="scoreForModal"></span></p>
         <p><span id="modalMessageForUser"></span></p>
-        <button class="close">
-          <span class="material-symbols-outlined">close</span>
+        <button class="closeButton">
+          <span class="closeButton">CLOSE</span>
         </button>
       </div>
     </div>

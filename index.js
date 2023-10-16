@@ -28,7 +28,7 @@ const retryAudio = new Audio();
 retryAudio.src = "./music/happyrock.mp3";
 
 const clickBGAudio = new Audio();
-clickBGAudio.src = "./music/1447_magic-wand-01.mp3"
+clickBGAudio.src = "./music/1447_magic-wand-01.mp3";
 
 
 
