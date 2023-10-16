@@ -21,8 +21,21 @@ body {
 h1 {
   font-family: 'Rajdhani', sans-serif;
   font-size: 3rem;
+  font-weight: 1000;
 
   /*color: rgba(5, 8, 46, 0.734);*/
+}
+
+.modal {
+  width: 1000px;
+  height: 600px;
+  background-color: antiquewhite;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border: 3px solid #7588;
+  border-radius: 18px;
 }
 
 #introductionP {
@@ -30,7 +43,7 @@ h1 {
   padding-bottom: 8px;
 }
 
-#scoreP {
+#scoreForModal {
   font-family: 'Rajdhani', sans-serif;
   font-size: 2rem;
   padding-top: 70px;
@@ -70,7 +83,12 @@ h1 {
   justify-content: center;
   font-size: x-large;
   font-weight: 700;
+  cursor: pointer;
 
+}
+
+#startButton.none {
+  display: none;
 }
 
 #endButton {
@@ -81,7 +99,10 @@ h1 {
   justify-content: center;
   font-size: x-large;
   font-weight: 700;
+}
 
+#endButton.none {
+  display: none;
 }
 
 /*#startButton:hover {}*/

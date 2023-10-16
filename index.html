@@ -25,7 +25,16 @@
     <p id="introductionP">Your aim is to catch as many books as possible. The more you catch, the bigger the sale you'll earn! 
     </p>
     <p>For each book you earn, you get a 0.5% discount. We wish you good luck!</p>
-    <p id="scoreP">SCORE: <span class="score"></span>0 </p> 
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h3>Game's Over!</h3>
+        <p>SCORE: <span id="scoreForModal"></span>0</p>
+        <p><span id="modalMessageForUser"></span></p>
+        <button class="close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+    </div>
 
 <!--div for all circles-->
 <div class="circles">
@@ -42,6 +51,7 @@
     <img src=https://icons.iconarchive.com/icons/iconarchive/fairy-tale/256/Hero-Magic-Book-icon.png alt="books">
   </div>
 </div>
+
 <button id="startButton">Start Game</button>
 <button id="endButton">End Game</button>
 
