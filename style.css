@@ -38,6 +38,10 @@ h1 {
   border-radius: 18px;
 }
 
+.modal.visible {
+  display: flex;
+}
+
 #introductionP {
   padding-top: 6px;
   padding-bottom: 8px;

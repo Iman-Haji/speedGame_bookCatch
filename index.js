@@ -15,8 +15,21 @@ let active = 0;
 let rounds = 0;
 
 
-const backgroundMusic = new Audio();
-backgroundMusic.src = "./music/adaytoremember.mp3"
+//const backgroundMusic = new Audio();
+//backgroundMusic.src = "./music/adaytoremember.mp3"
+
+const backgroundAudio = new Audio();
+backgroundAudio.src = "./music/adaytoremember.mp3";
+
+const gameOverAudio = new Audio();
+gameOverAudio.src = "./music/ofeliasdream.mp3";
+
+const retryAudio = new Audio();
+retryAudio.src = "./music/happyrock.mp3";
+
+const clickBGAudio = new Audio();
+clickBGAudio.src = "./music/1447_magic-wand-01.mp3"
+
 
 
 //random number for the buttons
@@ -28,7 +41,7 @@ function getRndInteger(min, max) {
 //console.log(getRndInteger(0, 3));
 
 const clickCircle = (i) => {
-
+  clickBGAudio.play();
   if (i !== active) {
     return endGame()
   }
@@ -53,34 +66,20 @@ const enableEvents = () => {
 function startGame() {
   startButton.classList.add('none');
   endButton.classList.remove('none');
+  backgroundAudio.play();
+  enableEvents();
   if (rounds >= 3) {
     return endGame();
   }
 
-  /*const startGame = () => {
-    if (rounds >= 3) {
-      return endGame();
-    }*/
-
-  //added
-  //let startGameSound = new Audio('');
-  //myAudio.play();
-
-  enableEvents();
-
   const newActive = pickNew(active);
   circles[newActive].classList.toggle('active');
   circles[active].classList.remove('active');
+  active = newActive;
   timer = setTimeout(startGame, gamePace);
   gamePace -= 18;
   rounds++;
   //active = newActive;
-  //active = newActive;
-
-  timer = setTimeout(startGame, 1000, gamePace)
-
-  gamePace -= 10;
-  rounds++;
 
   function pickNew(active) {
     const newActive = getRndInteger(0, 3);
@@ -95,16 +94,16 @@ function startGame() {
 
 
 
-const endGame = () => {
+function endGame() {
   clearTimeout(timer);
-  //resetGame();
+  backgroundAudio.pause();
   showModal();
   if (score < 20) {
-    //add a game over type music
+    gameOverAudio.play();
   } else if (score >= 20 && score < 40) {
-    // try again music
+    retryAudio.play();
   } else {
-    //add a music for cheering
+    backgroundAudio.play();
   }
   startButton.classList.add('none');
   endButton.classList.add('none');
