@@ -45,6 +45,7 @@ h1 {
 
 .modal.visible {
   display: flex;
+  color: #d9aeae;
 }
 
 
